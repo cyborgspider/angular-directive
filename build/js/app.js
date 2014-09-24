@@ -1,6 +1,12 @@
 angular
   .module('App', [])
 
-  .controller('AppCtrl', function($scope){
-    $scope.message = 'World';
+  .directive('yoYo', function(){
+    return {
+      template: '<div class="yo-yo">Yo<span ng-transclude></span>!</div>',
+      // templateUrl: 'yo-template.html',
+      restrict: 'E',
+      transclude: true,
+      replace: false
+    }
   });
